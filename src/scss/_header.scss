@@ -1,0 +1,122 @@
+header {
+    $main-font-size: 0.7rem;
+
+    align-items: center;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    & > div {
+        align-items: center;
+        border: 1px solid #e6e6e6;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+
+        &:nth-child(1) {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+            width: 90px;
+
+            .menu-icon {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0 10px 0 0;
+                justify-content: center;
+                width: 15px;
+
+                .dash {
+                    background-color: black;
+                    height: 1.75px;
+                    margin: 2px 0;
+                    transition: 0.4s;
+                    width: 100%;
+
+                    &:nth-child(1), &:nth-child(3) {
+                        transform-origin: center right;
+                    }
+                }
+
+                &.active {
+                    .dash {
+                        &:nth-child(1) {
+                            transform: rotateZ(-45deg);
+                        }
+                        
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        
+                        &:nth-child(3) {
+                            transform: rotateZ(45deg);
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: $main-font-size;
+            }
+        }
+
+        &:nth-child(2) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            width: 90%;
+
+            div {
+                &:nth-child(1) {
+                    align-items: center;
+                    cursor: pointer;
+                    display: flex;
+                    height: 100%;
+
+                    img {
+                        height: 25%;
+                    }
+                }
+            }
+
+
+            h2 {
+                cursor: pointer;
+                font-size: 1rem;
+                margin: 0;
+            }
+
+            p {
+                cursor: pointer;
+                font-size: $main-font-size;
+                margin: 0;
+            }
+        }
+
+        &.join-us {
+            background-color: #49c5b6;
+            color: white;
+            cursor: pointer;
+            padding: 0 10px;
+            width: 200px;
+
+            &:hover {
+                background-color: #3c9e93;
+            }
+
+            p {
+                font-size: $main-font-size;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
